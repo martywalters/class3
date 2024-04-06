@@ -3,8 +3,14 @@ score = 0
 # Get user input
 password = input("Enter a password: ")    
 # Check password length
+
 if len(password) >= 8:
     score += 1
+if len(password) > 8:
+    score += 1
+if len(password) >= 16:
+    score += 1
+
 
 for c in password:
     if c.isupper():
