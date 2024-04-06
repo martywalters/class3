@@ -1,35 +1,28 @@
-def password_strength(password):
-    # Initialize the score
-    score = 0
-    
-    # Check password length
-    if len(password) >= 8:
-        score += 1
-    
-    # Check for uppercase letters
-    if any(c.isupper() for c in password):
-        score += 1
-    
-    # Check for lowercase letters
-    if any(c.islower() for c in password):
-        score += 1
-    
-    # Check for numeric digits
-    if any(c.isdigit() for c in password):
-        score += 1
-    
-    # Check for special symbols
-    special_symbols = "!@#$%^&*"
-    if any(c in special_symbols for c in password):
-        score += 1
-    
-    return score
-
+# Initialize the score
+score = 0
 # Get user input
-user_password = input("Enter a password: ")
+password = input("Enter a password: ")    
+# Check password length
+if len(password) >= 8:
+    score += 1
 
-# Calculate the password strength
-strength_score = password_strength(user_password)
+for c in password:
+    if c.isupper():
+        score += 1
+        break
+for c in password:
+    if c.islower():
+        score += 1
+        break
+for c in password:
+    if c.isdigit():
+        score += 1
+        break
+special_symbols = "!@#$%^&*"
+for c in password:
+    if c in special_symbols:
+        score += 1
+        break
 
 # Display the result
-print(f"Password strength score: {strength_score}")
+print(f"Your password score is: {score}")
