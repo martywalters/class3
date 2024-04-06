@@ -1,13 +1,17 @@
-#An empty string is also a palindrome, since it "reads" the same forward and backward.
+#An empty string  or a one character string is also a palindrome,
+#since it "reads" the same forward and backward.
 is_palindrome = True
 input_str = input("Enter a string: ")
 
 #Extra Credit
 s = input_str.replace(" ", "").lower()
 
-left, right = 0, len(s) - 1
+left = 0
+right = len(s) - 1
 
 
+#print (left)
+#print(right)
 while left < right:
     if s[left] != s[right]:
         is_palindrome = False
@@ -15,8 +19,5 @@ while left < right:
     left += 1
     right -= 1
     
+print(f"Is '{input_str}' a palindrome? {is_palindrome}")
 
-if is_palindrome:
-    print(f"{input_str} : a palindrome!")
-else:
-    print(f"{input_str} : NOT a palindrome.")
