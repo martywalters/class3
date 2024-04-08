@@ -14,12 +14,12 @@ if principal <1 or principal > 1000000:
     print(f'Error principal {principal:.2f} not between 1 and 1,000,000')
     valid_principal = False
     
-apr = float(input("Enter interest rate percentage (ex: 4.5):)"))
+apr = float(input("Enter interest rate percentage (ex: 4.5): "))
 if apr < 0 or apr > 100:
     valid_apr = False
     print(f'Error APR {apr:.2f} not between 0 and 100')
      
-term = int(input("Enter term in years (ex: 10):"))
+term = int(input("Enter term in years (ex: 10): "))
 if term < 1 or term > 30:
     valid_term = False
     print(f'Error term {term:.2f} not between 1 and 30')

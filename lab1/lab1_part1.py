@@ -1,4 +1,5 @@
 #Intermediate Python Programming - Lab1 "Part 1" Sean Walters
+
 #python script to determine if a user-entered string is a palindrome.
 #A palindrome is text that reads the same forwards and backwards.
 
