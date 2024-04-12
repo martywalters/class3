@@ -35,7 +35,7 @@ def inputString(prompt = "Enter a string: ", min_length = 0, max_length = 100):
             if min_length <= string_len <= max_length:
                 return string_value
             else:
-                print(f"String Length is out of range. Please enter a string with length  between {min_length} and {max_length}.")
+                print("Text must be between 5 and 10 in length")
         else:
             print("Entered text needs to be in string. Please try again.")
 
@@ -45,4 +45,4 @@ def inputDate(prompt = "Enter a date in ISO format (yyyy-mm-dd): "):
         if isDate(date_value):
                 return date_value
         else:
-            print("Enter a date in ISO format (yyyy-mm-dd):. Please try again.")
+            print("Value must be a date")
