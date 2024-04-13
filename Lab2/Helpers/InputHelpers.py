@@ -1,6 +1,5 @@
-
 __all__ = ['inputInt', 'inputFloat', 'inputString', 'inputDate']
-
+from datetime import datetime
 from Helpers.DataTypeHelpers import *
 def inputInt(prompt = "Enter an integer: ", min_value = 0, max_value = 100):
     while True:
@@ -29,20 +28,22 @@ def inputFloat(prompt = "Enter a float: ", min_value = 0, max_value = 100):
 
 def inputString(prompt = "Enter a string: ", min_length = 0, max_length = 100):
     while True:
-        string_value =  input(prompt)
-        if isString(string_value):
+    #input will validate string
+        try:
+            string_value =  input(prompt)
             string_len = len(string_value)
             if min_length <= string_len <= max_length:
                 return string_value
             else:
                 print("Text must be between 5 and 10 in length")
-        else:
+        except ValueError:
             print("Entered text needs to be in string. Please try again.")
 
 def inputDate(prompt = "Enter a date in ISO format (yyyy-mm-dd): "):
     while True:
         date_value =  input(prompt)
         if isDate(date_value):
-                return date_value
+                return (datetime.fromisoformat(date_value))
+                #return date_value
         else:
-            print("Value must be a date")
+            print("text needs to be in the “yyyy-mm-dd” format")
