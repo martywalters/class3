@@ -1,4 +1,6 @@
 __all__ = ['inputInt', 'inputFloat', 'inputString', 'inputDate']
+
+#Intermediate Python Programming - Lab2 Sean Walters
 from datetime import datetime
 from Helpers.DataTypeHelpers import *
 def inputInt(prompt = "Enter an integer: ", min_value = 0, max_value = 100):

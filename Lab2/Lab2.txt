@@ -1,0 +1,26 @@
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+============ RESTART: /home/walters/src/class3/Lab2/HelpersDriver.py ===========
+Please enter a number: -1
+Value -1 is out of range (0 to 100).
+Please enter a number: 101
+Value 101 is out of range (0 to 100).
+Please enter a number: 1
+1
+Please enter a number: -10.1
+Value is out of range. Please enter a float between -10 and 1000.
+Please enter a number: 1000.1
+Value is out of range. Please enter a float between -10 and 1000.
+Please enter a number: 567.123
+567.123
+Enter some text: tiny
+Text must be between 5 and 10 in length
+Enter some text: This is way too long
+Text must be between 5 and 10 in length
+Enter some text: Just right
+Just right
+Enter a date: December 10, 2000
+text needs to be in the “yyyy-mm-dd” format
+Enter a date: 2000-12-10
+2000-12-10 00:00:00
