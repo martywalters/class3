@@ -13,10 +13,10 @@ class Student:
     def addCourses(self, courses):
         return 0
 
-    def __str__(self):
-        return 'str'
-    def __repr__(self):
-        return 'repr'
+    #def __str__(self):
+    #    return 'str'
+    #def __repr__(self):
+    #    return 'repr'
     def header(self):
         return 'header'
         
@@ -26,5 +26,6 @@ class Student:
 
 s = Student(123,'Marty','Walters')
 print(s)
+print(repr(s))
 s.say_hi()
     
