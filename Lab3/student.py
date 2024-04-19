@@ -8,7 +8,6 @@ class Student:
         self.lastName = lastName
         if courses == None:
             self.courses = dict()
-            #print('variable after assignment ' + str(self.courses))
         else:
             self.courses = courses
         
@@ -41,9 +40,10 @@ class Student:
 
     @classmethod
     def header(cls):
-        return f"{'ID':<6}  {'Last Name':<10}  {'First Name':<8} {'GPA':<5}    Courses\n=========================================================================================="
-        
-    @staticmethod
+        return f"{'ID':<6}  {'Last Name':<10}  {'First Name':<8} {'GPA':<5}    Courses\n"+'='*90
+        #return f"{'ID':<6}  {'Last Name':<10}  {'First Name':<8} {'GPA':<5}    Courses\n=========================================================================================="
+ 
+    #@staticmethod
     def printStudents(students):
         print(Student.header())
         for student in students:
@@ -51,20 +51,27 @@ class Student:
 
 
 
-student1 = Student(123456, "Johnnie", "Smith", {"CSE-101": 3.5, "CSE-102": 3, "CSE-201": 4, "CSE-220": 3.75, "CSE-325": 4})
-student2 = Student(123457, "Sean", "Walters", {"CSE-101": 3.54})
-print(Student.header())
-print(student1)
-print(student2)
+##student1 = Student(123456, "Johnnie", "Smith", {"CSE-101": 3.5, "CSE-102": 3, "CSE-201": 4, "CSE-220": 3.75, "CSE-325": 4})
+##student2 = Student(123457, "Sean", "Walters", {"CSE-101": 3.54})
+##print(Student.header())
+##print(student1)
+##print(student2)
 
 # Creating students
 students = [
-    Student(123456, "Johnnie", "Smith", {"CSE-101": 3.5, "CSE-102": 3.0, "CSE-201": 4.0, "CSE-220": 3.75, "CSE-325": 4.0}),
-    Student(234567, "Jamie", "Strauss", {"CSE-101": 3.0, "CSE-103": 3.5, "CSE-202": 3.25, "CSE-220": 4.0, "CSE-401": 4.0}),
-    Student(345678, "Jack", "O'Neill", {"CSE-101": 2.5, "CSE-102": 3.5, "CSE-103": 3.0, "CSE-104": 4.0}),
-    Student(456789, "Susie", "Marks"),
-    Student(567890, "Frank", "Marks"),
-    Student(654321, "Annie", "Marks")
+    Student('123456', "Johnnie","Smith", {"CSE-101": 3.5, "CSE-102": 3.0, "CSE-201": 4.0, "CSE-220": 3.75, "CSE-325": 4.0}),
+    Student('234567', "Jamie","Strauss", {"CSE-101": 3.0, "CSE-103": 3.5, "CSE-202": 3.25, "CSE-220": 4.0, "CSE-401": 4.0}),
+    Student('345678', "Jack","O'Neill", {"CSE-101": 2.5, "CSE-102": 3.5, "CSE-103": 3.0, "CSE-104": 4.0}),
+    Student('456789', "Susie","Marks"),
+    Student('567890', "Frank","Marks"),
+    Student('654321', "Annie","Marks"),
+    #Student('456789', "Susie","Marks", {"CSE-101": 4.0, "CSE-103": 2.5, "CSE-301": 3.5, "CSE-302": 3.0, "CSE-310": 4.0}),
+    #Student('567890', "Frank","Marks", {"CSE-102": 4.0, "CSE-104": 3.5, "CSE-201": 2.5, "CSE-202": 3.5, "CSE-203": 3.0}),
+    #Student('654321', "Annie","Marks", {"CSE-101": 4.0, "CSE-102": 4.0, "CSE-103": 3.5, "CSE-201": 4.0, "CSE-203": 4.0}),
+    Student('456987', "John","Smith", {"CSE-101": 2.5, "CSE-103": 3.0, "CSE-210": 3.5, "CSE-260": 4.0}),
+    Student('987456', "Judy","Smith", {"CSE-102": 4.0, "CSE-103": 4.0, "CSE-201": 3.0, "CSE-210": 3.5, "CSE-310": 4.0}),
+    Student('111354', "Kelly","Williams", {"CSE-101": 3.5, "CSE-102": 3.5, "CSE-201": 3.0, "CSE-202": 3.5, "CSE-203": 3.5}),
+    Student('995511', "Brad","Williams", {"CSE-102": 3.0, "CSE-110": 3.5, "CSE-125": 3.5, "CSE-201": 4.0, "CSE-203": 3.0})
 ]
 # Adding courses for students created without passing courses in __init__
 #print('adding to empty' )
@@ -119,9 +126,21 @@ Student.printStudents(honor_roll_students)
 # Query 3 with set comprehension
 unique_courses_query3 = {course for student in students for course in student.courses.keys()}
 print("\nQuery 3 with set comprehension: Unique courses taken by all students")
+
+
+
 print(unique_courses_query3)
 
+print()
+print(students[0].__str__())
+print(students[1].__str__())
+print(students[2].__str__())
+print()
+print(students[0].__repr__())
+print()
+print(Student.header())
 
     
-
+#==========================================================================================
+#123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
     
