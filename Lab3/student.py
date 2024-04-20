@@ -1,4 +1,4 @@
-# A Student class with init method
+# Student class
 from functools import reduce
 class Student:
 
@@ -13,7 +13,7 @@ class Student:
         
     def __str__(self):
         course_str = ",".join(self.courses.keys())
-        return f"{self.id:<6}  {self.lastName:<10}  {self.firstName:<8}   {self.gpa():.3f}    {course_str}"
+        return f"{self.id:<6}    {self.lastName:<10}     {self.firstName:<8}       {self.gpa():.3f} {course_str}"
     
     def __repr__(self):
         return f"{self.id},{self.lastName},{self.firstName},{self.courses}"
@@ -21,27 +21,23 @@ class Student:
     def gpa(self):
         if not self.courses:
             return 0
-        total_points = reduce(lambda x, y: x + y, self.courses.values())
+        #total_points = sum(self.courses.values())
+        total_points = reduce(lambda x, y: x + y, self.courses.values()) #extra credit
         return total_points / len(self.courses)
     
     def addCourse(self, course, score):
-        assert isinstance(score, (int, float)), "Score must be a numeric type"
-        assert 0 <= score <= 4, "Score must be between 0 and 4"
-        #self.courses[course] = score
+        #assert isinstance(score, (int, float)), "Score must be a numeric type"
+        #assert 0 <= score <= 4, "Score must be between 0 and 4"
         self.addCourses({course: score})
         
     
     def addCourses(self, courses):
-        #print('new course '+ str(courses))
-        #assert isinstance(courses, dict), "Courses must be a dictionary"
-        #print('existing course ' + str(self.courses))
         self.courses.update(courses)
 
 
     @classmethod
     def header(cls):
-        return f"{'ID':<6}  {'Last Name':<10}  {'First Name':<8} {'GPA':<5}    Courses\n"+'='*90
-        #return f"{'ID':<6}  {'Last Name':<10}  {'First Name':<8} {'GPA':<5}    Courses\n=========================================================================================="
+        return f"{'ID':<6}    {'Last Name':<10}     {'First Name':<8}       {'GPA':4}Courses\n"+'='*90
  
     #@staticmethod
     def printStudents(students):
@@ -51,11 +47,20 @@ class Student:
 
 
 
-##student1 = Student(123456, "Johnnie", "Smith", {"CSE-101": 3.5, "CSE-102": 3, "CSE-201": 4, "CSE-220": 3.75, "CSE-325": 4})
-##student2 = Student(123457, "Sean", "Walters", {"CSE-101": 3.54})
-##print(Student.header())
-##print(student1)
-##print(student2)
+print('\n' +'*'*15 + ' Part 1 '+ '*'*15 + '\n' )
+student1 = Student(123456, "Johnnie", "Smith", {"CSE-101": 3.5, "CSE-102": 3, "CSE-201": 4, "CSE-220": 3.75, "CSE-325": 4})
+student2 = Student(234567, "Jamie", "Strauss", {'CSE-101': 3.55, 'CSE-103': 3.45, 'CSE-202': 3.65, 'CSE-220': 3.35, 'CSE-401': 3.75})
+student3 = Student(345678, "Jack", "O'Neill", {'CSE-101': 3.25, 'CSE-102': 3.15, 'CSE-103': 3.35, 'CSE-104': 3.25})
+
+
+print(student1)
+print(student2)
+print(student3)
+
+print()
+print(repr(student1))
+print()
+print(Student.header())
 
 # Creating students
 students = [
@@ -74,7 +79,6 @@ students = [
     Student('995511', "Brad","Williams", {"CSE-102": 3.0, "CSE-110": 3.5, "CSE-125": 3.5, "CSE-201": 4.0, "CSE-203": 3.0})
 ]
 # Adding courses for students created without passing courses in __init__
-#print('adding to empty' )
 students[3].addCourse("CSE-101", 4.0)
 students[3].addCourse("CSE-103", 2.5)
 students[3].addCourse("CSE-301", 3.5)
@@ -92,9 +96,11 @@ students[5].addCourse("CSE-102", 4.0)
 students[5].addCourse("CSE-103", 3.5)
 students[5].addCourse("CSE-201", 4.0)
 students[5].addCourse("CSE-203", 4.0)
-
+print('\n' +'*'*15 + ' Part 2 '+ '*'*15 +'\n' )
 # Printing students
 Student.printStudents(students)
+
+print('\n' +'*'*15 + ' Part 3 '+ '*'*15 +'\n' )
 
 # Query 1: Sort the list by lastName, firstName in ascending order
 sorted_students_query1 = sorted(students, key=lambda x: (x.lastName, x.firstName))
@@ -124,23 +130,10 @@ Student.printStudents(honor_roll_students)
 
 #extra credit
 # Query 3 with set comprehension
-unique_courses_query3 = {course for student in students for course in student.courses.keys()}
+unique_courses_query3 = {course for student in students for course in student.courses}
 print("\nQuery 3 with set comprehension: Unique courses taken by all students")
-
-
-
 print(unique_courses_query3)
 
-print()
-print(students[0].__str__())
-print(students[1].__str__())
-print(students[2].__str__())
-print()
-print(students[0].__repr__())
-print()
-print(Student.header())
 
-    
-#==========================================================================================
-#123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+
     

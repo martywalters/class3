@@ -1,0 +1,84 @@
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+
+=============== RESTART: /home/walters/src/class3/Lab3/student.py ==============
+
+*************** Part 1 ***************
+
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+234567    Strauss        Jamie          3.550 CSE-101,CSE-103,CSE-202,CSE-220,CSE-401
+345678    O'Neill        Jack           3.250 CSE-101,CSE-102,CSE-103,CSE-104
+
+123456,Smith,Johnnie,{'CSE-101': 3.5, 'CSE-102': 3, 'CSE-201': 4, 'CSE-220': 3.75, 'CSE-325': 4}
+
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+
+*************** Part 2 ***************
+
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+234567    Strauss        Jamie          3.550 CSE-101,CSE-103,CSE-202,CSE-220,CSE-401
+345678    O'Neill        Jack           3.250 CSE-101,CSE-102,CSE-103,CSE-104
+456789    Marks          Susie          3.400 CSE-101,CSE-103,CSE-301,CSE-302,CSE-310
+567890    Marks          Frank          3.300 CSE-102,CSE-104,CSE-201,CSE-202,CSE-203
+654321    Marks          Annie          3.900 CSE-101,CSE-102,CSE-103,CSE-201,CSE-203
+456987    Smith          John           3.250 CSE-101,CSE-103,CSE-210,CSE-260
+987456    Smith          Judy           3.700 CSE-102,CSE-103,CSE-201,CSE-210,CSE-310
+111354    Williams       Kelly          3.400 CSE-101,CSE-102,CSE-201,CSE-202,CSE-203
+995511    Williams       Brad           3.400 CSE-102,CSE-110,CSE-125,CSE-201,CSE-203
+
+*************** Part 3 ***************
+
+Query 1: Sorted by last name, first name in ascending order
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+654321    Marks          Annie          3.900 CSE-101,CSE-102,CSE-103,CSE-201,CSE-203
+567890    Marks          Frank          3.300 CSE-102,CSE-104,CSE-201,CSE-202,CSE-203
+456789    Marks          Susie          3.400 CSE-101,CSE-103,CSE-301,CSE-302,CSE-310
+345678    O'Neill        Jack           3.250 CSE-101,CSE-102,CSE-103,CSE-104
+456987    Smith          John           3.250 CSE-101,CSE-103,CSE-210,CSE-260
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+987456    Smith          Judy           3.700 CSE-102,CSE-103,CSE-201,CSE-210,CSE-310
+234567    Strauss        Jamie          3.550 CSE-101,CSE-103,CSE-202,CSE-220,CSE-401
+995511    Williams       Brad           3.400 CSE-102,CSE-110,CSE-125,CSE-201,CSE-203
+111354    Williams       Kelly          3.400 CSE-101,CSE-102,CSE-201,CSE-202,CSE-203
+
+Query 2: Sorted by GPA in descending order
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+654321    Marks          Annie          3.900 CSE-101,CSE-102,CSE-103,CSE-201,CSE-203
+987456    Smith          Judy           3.700 CSE-102,CSE-103,CSE-201,CSE-210,CSE-310
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+234567    Strauss        Jamie          3.550 CSE-101,CSE-103,CSE-202,CSE-220,CSE-401
+456789    Marks          Susie          3.400 CSE-101,CSE-103,CSE-301,CSE-302,CSE-310
+111354    Williams       Kelly          3.400 CSE-101,CSE-102,CSE-201,CSE-202,CSE-203
+995511    Williams       Brad           3.400 CSE-102,CSE-110,CSE-125,CSE-201,CSE-203
+567890    Marks          Frank          3.300 CSE-102,CSE-104,CSE-201,CSE-202,CSE-203
+345678    O'Neill        Jack           3.250 CSE-101,CSE-102,CSE-103,CSE-104
+456987    Smith          John           3.250 CSE-101,CSE-103,CSE-210,CSE-260
+
+Query 3: Unique courses taken by all students
+{'CSE-201', 'CSE-401', 'CSE-302', 'CSE-104', 'CSE-260', 'CSE-325', 'CSE-202', 'CSE-110', 'CSE-103', 'CSE-210', 'CSE-125', 'CSE-101', 'CSE-301', 'CSE-310', 'CSE-220', 'CSE-203', 'CSE-102'}
+
+Query 4: Students who have taken 'CSE-201'
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+567890    Marks          Frank          3.300 CSE-102,CSE-104,CSE-201,CSE-202,CSE-203
+654321    Marks          Annie          3.900 CSE-101,CSE-102,CSE-103,CSE-201,CSE-203
+987456    Smith          Judy           3.700 CSE-102,CSE-103,CSE-201,CSE-210,CSE-310
+111354    Williams       Kelly          3.400 CSE-101,CSE-102,CSE-201,CSE-202,CSE-203
+995511    Williams       Brad           3.400 CSE-102,CSE-110,CSE-125,CSE-201,CSE-203
+
+Query 5: Honor roll students (GPA >= 3.5)
+ID        Last Name      First Name       GPA Courses
+==========================================================================================
+123456    Smith          Johnnie        3.650 CSE-101,CSE-102,CSE-201,CSE-220,CSE-325
+234567    Strauss        Jamie          3.550 CSE-101,CSE-103,CSE-202,CSE-220,CSE-401
+654321    Marks          Annie          3.900 CSE-101,CSE-102,CSE-103,CSE-201,CSE-203
+987456    Smith          Judy           3.700 CSE-102,CSE-103,CSE-201,CSE-210,CSE-310
+
+Query 3 with set comprehension: Unique courses taken by all students
+{'CSE-201', 'CSE-401', 'CSE-302', 'CSE-104', 'CSE-260', 'CSE-325', 'CSE-202', 'CSE-110', 'CSE-103', 'CSE-210', 'CSE-125', 'CSE-101', 'CSE-301', 'CSE-310', 'CSE-220', 'CSE-203', 'CSE-102'}
