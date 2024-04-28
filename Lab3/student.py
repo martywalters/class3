@@ -130,9 +130,10 @@ Student.printStudents(honor_roll_students)
 
 #extra credit
 # Query 3 with set comprehension
-unique_courses_query3 = {course for student in students for course in student.courses}
+unique_courses_extracredit = {course for student in students for course in student.courses}
 print("\nQuery 3 with set comprehension: Unique courses taken by all students")
-print(unique_courses_query3)
+print(unique_courses_extracredit)
+
 
 
 

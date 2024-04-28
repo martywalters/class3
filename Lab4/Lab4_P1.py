@@ -28,25 +28,44 @@ class LeibnizPiIterator:
         self.n += 2
         return self.fraction
 
-# Test iterations to 100,000 
-pi_iterator = LeibnizPiIterator()
-#iterator = iter(pi_iterator)
-iterator = iter(pi_iterator)
-for pi_counter in range(iterations):
-    pi_iterator = next(iterator)
-difference = abs(pi_iterator.value - pi50)
-print(f"pi after {iterations} iterations: {pi_iterator.value:2.50f}")
-print(f"Difference: { difference:2.50f}")
+iterations = 100000 
+counter = 0
+for x in LeibnizPiIterator():
+    counter += 1
+    if counter >= iterations: break
+print(f"pi after {counter} iterations: {x.value:.50f}")
+diff = abs(pi50 - x.value)
+print(f"Difference: {diff:0.50f}")
 
-# Test iterations to 10,000,000
-pi_iterator = LeibnizPiIterator()
-iterator = iter(pi_iterator)
-for pi_counter in range(iterationsLong):
-    pi_iterator = next(iterator)
-difference = abs(pi_iterator.value - pi50)
-print(f"pi after {iterationsLong} iterations: {pi_iterator.value:2.50f}")
-print(f"Difference: { difference:2.50f}")
-
+iterations = 10000000
+counter = 0
+for x in LeibnizPiIterator():
+    counter += 1
+    if counter >= iterations: break
+print(f"pi after {counter} iterations: {x.value:.50f}")
+diff = abs(pi50 - x.value)
+print(f"Difference: {diff:0.50f}")
+    
+##
+### Test iterations to 100,000 
+##pi_iterator = LeibnizPiIterator()
+###iterator = iter(pi_iterator)
+##iterator = iter(pi_iterator)
+##for pi_counter in range(iterations):
+##    pi_iterator = next(iterator)
+##difference = abs(pi_iterator.value - pi50)
+##print(f"pi after {iterations} iterations: {pi_iterator.value:2.50f}")
+##print(f"Difference: { difference:2.50f}")
+##
+### Test iterations to 10,000,000
+##pi_iterator = LeibnizPiIterator()
+##iterator = iter(pi_iterator)
+##for pi_counter in range(iterationsLong):
+##    pi_iterator = next(iterator)
+##difference = abs(pi_iterator.value - pi50)
+##print(f"pi after {iterationsLong} iterations: {pi_iterator.value:2.50f}")
+##print(f"Difference: { difference:2.50f}")
+##
 
 
 
