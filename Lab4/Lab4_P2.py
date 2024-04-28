@@ -1,6 +1,11 @@
 from Fraction import *
-from decimal import Decimal
+from decimal import *
 pi50 = Decimal("3.14159265358979323846264338327950288419716939937510")
+
+rangeshort = 100000
+rangelong  = 10000000
+
+print('Lab4 Part 2...')
 
 def NilakanthaPiGenerator():
     fraction = Fraction(3, 1)
@@ -17,22 +22,22 @@ def NilakanthaPiGenerator():
         num += 2
         yield fraction
 
-# Test the Generator
-def test_nilakantha_pi(iterations):
-    print(f"pi after {iterations} iterations:", end=' ')
-    pi_generator = NilakanthaPiGenerator()
-    for _ in range(iterations):
-        pi_value = next(pi_generator)
-    print(pi_value)
 
-    # Calculate the difference
-    difference = pi_value - pi50
-    print("Difference:", difference)
+pi_generator_100k = NilakanthaPiGenerator()
+for iterator in range(rangeshort):
+    approximation = next(pi_generator_100k)
 
-# Set iterations to 100,000 and test
-iterations = 100000
-test_nilakantha_pi(iterations)
+difference = abs(approximation.value - pi50)
+print(f"pi after {rangeshort} iterations: {approximation.value:2.50f}")
+print(f"Difference: { difference:2.50f}")
 
-# Change iterations variable to 10,000,000 and re-run the test
-iterations = 10000000
-test_nilakantha_pi(iterations)
+
+pi_generator_10000k = NilakanthaPiGenerator()
+for iterator in range(rangelong):
+    approximation = next(pi_generator_10000k)
+
+difference = abs(approximation.value - pi50)
+print(f"pi after {rangelong} iterations: {approximation.value:2.50f}")
+print(f"Difference: { difference:2.50f}")
+
+

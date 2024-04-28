@@ -1,5 +1,6 @@
 from functools import reduce
 
+print('Lab4 Part 3 Extra Credit...')
 # Define the compose function
 def compose(*functions):
     return reduce(lambda f, g: lambda x: g(f(x)), functions)
