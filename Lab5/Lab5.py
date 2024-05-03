@@ -1,7 +1,7 @@
 #Part 1
 import random
 
-#Part 1 Extra Credit
+#Part 1 Extra Credit & 4
 import concurrent.futures
 
 #Part 2
@@ -9,8 +9,6 @@ import sqlite3
 people_db_file = "sqlite.db"  # The name of the database file to use
 max_people = 500  # Number of records to create
 
-#Part 4
-import concurrent.futures
 
 #Part 1
 def generate_people(count):
