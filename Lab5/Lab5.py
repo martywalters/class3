@@ -12,6 +12,7 @@ max_people = 500  # Number of records to create
 #Part 4
 import concurrent.futures
 
+#Part 1
 def generate_people(count):
     # Initialize empty lists for first and last names
     last_names = []
