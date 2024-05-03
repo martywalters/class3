@@ -6,37 +6,34 @@ def compose(*functions):
     return reduce(lambda f, g: lambda x: g(f(x)), functions)
 
 # Metric system conversion functions
-def cm_to_mm(cm):
+def cmToMm(cm):
     return cm * 10
 
-def mm_to_cm(mm):
+def mmToCm(mm):
     return mm * 0.1
 
-def mm_to_um(mm):
+def mmToUm(mm):
     return mm * 1000
 
-def um_to_mm(um):
+def umToMm(um):
     return um * 0.001
 
-def um_to_angstrom(um):
+def umToAngstrom(um):
     return um * 10000
 
-def angstrom_to_um(angstrom):
+def angstromToUm(angstrom):
     return angstrom * 0.0001
 
-# Define unit conversion compositions
-cm_to_um = compose(mm_to_um, cm_to_mm)
-um_to_cm = compose(mm_to_cm, um_to_mm)
-um_to_angstrom = compose(angstrom_to_um, um_to_mm)
-
-# Test the conversions
+cmToUm = compose(mmToUm, cmToMm)
+umToCm = compose(mmToCm, umToMm)
+cmToAngstrom = compose(umToAngstrom,mmToUm, cmToMm)
+angstromToCm = compose(mmToCm,umToMm,angstromToUm)
 conversions = [
-    ("cm to mm", cm_to_mm(5), 50),
-    ("mm to cm", mm_to_cm(20), 2),
-    ("mm to μm", mm_to_um(0.5), 500),
-    ("μm to mm", um_to_mm(2000), 2),
-    ("μm to Å", um_to_angstrom(3), 30000),
+    ("cm to um",5, cmToMm(5), 50000),
+    ("um to cm",10000, umToCm(10000), 1),
+    ("cm to angstrom",3, cmToAngstrom(3), 300000000),
+    ("angstrom to mm",2000000,angstromToCm(2000000),0.2)
 ]
 
 for conversion in conversions:
-    print(f"{conversion[0]}: {conversion[1]} (expected: {conversion[2]})")
+    print(f"Convert {conversion[1]} {conversion[0]}: {conversion[2]} (expected: {conversion[3]})")
