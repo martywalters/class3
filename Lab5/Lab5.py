@@ -137,25 +137,31 @@ def load_all_people():
         return records
 
 if __name__ == "__main__":
-    #Part 1 test -----
+    #Part 1
+    print('Lab5 Part 1')
     people = generate_people(5)
     print(people)
 
+    print('\nLab5 Part 1 Extra Credit')
     #Part 1 Extra Credit
     names = load_names_concurrently(5)
     print(names)
 
     #Part 2
+    print('\nLab5 Part 2')
     create_people_database(people_db_file, max_people)
 
     #Part 3
+    print('\nLab5 Part 3')
     test_PersonDB()
 
     #Part 4
+    print('\nLab5 Part 4')
     all_people = load_all_people()
     print(all_people)
 
     #Part 4 Extra Credit
+    print('\nLab5 Part 4 Extra Credit')
     sorted_people = sorted(all_people, key=lambda x: (x[2], x[1]))  # Sort by last name, then first name
     print(sorted_people)
     
