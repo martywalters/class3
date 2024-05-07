@@ -6,6 +6,7 @@ import concurrent.futures
 
 #Part 2
 import sqlite3
+from sqlite3 import Error
 people_db_file = "sqlite.db"  # The name of the database file to use
 max_people = 500  # Number of records to create
 
@@ -25,7 +26,13 @@ def generate_people(count):
         first_names = [name.rstrip() for name in filehandle.readlines()]
     
     # Generate list of random people tuples
-    names = [(i, random.choice(first_names), random.choice(last_names)) for i in range(count)]
+    #names = [(i, random.choice(first_names), random.choice(last_names)) for i in range(count)]
+    # using random.randint
+    max_firstname_items = len(first_names)
+    max_lastname_items = len(last_names)
+    names = [(i, first_names[random.randint(0,max_firstname_items-1)] ,last_names[random.randint(0,max_lastname_items-1)]) for i in range(count)]
+    return names
+    
     
     return names
 
@@ -45,7 +52,11 @@ def load_names_concurrently(count):
         last_names = future_last_names.result()
         first_names = future_first_names.result()
 
-    names = [(i, random.choice(first_names), random.choice(last_names)) for i in range(count)]
+    #names = [(i, random.choice(first_names), random.choice(last_names)) for i in range(count)]
+    # using random.randint
+    max_firstname_items = len(first_names)
+    max_lastname_items = len(last_names)
+    names = [(i, first_names[random.randint(0,max_firstname_items-1)] ,last_names[random.randint(0,max_lastname_items-1)]) for i in range(count)]
     return names
 
 #Part 2
@@ -70,16 +81,17 @@ def create_people_database(db_file, count):
             cursor.execute(sql_truncate_people)
 
             # from Part 1 
-            #people = generate_people(count)
+            people = generate_people(count)
 
             # from Part 1 Extra Credit
-            people = load_names_concurrently(count)
+            #people = load_names_concurrently(count)
 
             # Create query to add the people records
             sql_insert_person = "INSERT INTO people(id, first_name, last_name) VALUES(?, ?, ?);"
             for person in people:
+                #print(person) # uncomment if you want to see the person object
                 cursor.execute(sql_insert_person, person)
-
+                #print(cursor.lastrowid) # uncomment if you want to see the row id
             cursor.close()
     
     except Error as e:
@@ -126,7 +138,7 @@ def load_person(id, db_file):
 def load_all_people():
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         # Submit tasks for loading all people records
-        future_records = [executor.submit(load_person, id, people_db_file) for id in range(max_people)]
+        future_records = [executor.submit(load_person, id, people_db_file) for id in range(max_people-1)]
         
         # Wait for all futures to complete
         concurrent.futures.wait(future_records)
