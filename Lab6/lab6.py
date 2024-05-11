@@ -69,7 +69,7 @@ def teller_job(teller, guard, teller_line, printlock):
             customer = teller_line.get(timeout=3)  # Adjust timeout as needed
             bankprint(printlock, f"[T] {teller.name} is now helping {customer.name}")
             #sleep(random.uniform(1, 4))
-            sleep(2)
+            #sleep(2)
             bankprint(printlock, f"[T] {teller.name} is done helping {customer.name}")
             bankprint(printlock, f"<G> Security guard is letting {customer.name} out of the bank")
             guard.release()
