@@ -1,0 +1,207 @@
+Week 1:Reading Assignment
+Learning Python
+Chapters 1 – 7, 12 – 13
+
+Online
+
+https://www.w3schools.com/python/python_variables.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_numbers.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_casting.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_strings.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_conditions.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_while_loops.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_for_loops.aspLinks to an external site.
+
+Reading Assignment
+Learning Python
+Chapter 16, 18, 19 (Recursive Functions), 22 – 25, 26 – 29
+
+Online
+
+https://www.w3schools.com/python/python_functions.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_classes.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_inheritance.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_modules.aspLinks to an external site.
+
+Week 3: Reading Assignment
+Learning Python
+Chapters 33-36, 4, 19, 20 (Comprehensions)
+
+Online
+
+https://www.w3schools.com/python/python_try_except.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_lists.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_sets.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_dictionaries.aspLinks to an external site.
+
+https://www.w3schools.com/python/python_lambda.aspLinks to an external site.
+
+https://www.w3schools.com/python/ref_func_map.aspLinks to an external site.
+
+https://www.w3schools.com/python/ref_func_filter.aspLinks to an external site.
+
+https://docs.python.org/3/library/functools.htmlLinks to an external site.   ← reduce()
+
+https://www.w3schools.com/python/ref_func_zip.aspLinks to an external site.
+
+https://www.w3schools.com/python/ref_func_any.aspLinks to an external site.
+
+https://www.w3schools.com/python/ref_func_all.aspLinks to an external site.
+
+https://docs.python.org/3/tutorial/datastructures.htmlLinks to an external site.  ← comprehensions
+
+Week 4:Reading Assignment
+Learning Python
+Chapters 17, 30 (Iterable Objects), 20 (Generator Functions and Expressions), 19, 39 - 40
+
+Online
+
+https://www.w3schools.com/python/python_iterators.aspLinks to an external site.
+
+https://wiki.python.org/moin/GeneratorsLinks to an external site. 
+Links to an external site.
+
+https://docs.python.org/3/library/functools.htmlLinks to an external site.
+
+https://wiki.python.org/moin/PythonDecoratorsLinks to an external site.
+
+https://www.python.org/dev/peps/pep-3107/Links to an external site.
+
+https://eli.thegreenplace.net/2011/08/14/python-metaclasses-by-example/Links to an external site.
+
+https://docs.python.org/3/howto/descriptor.htmlLinks to an external site.
+
+Week 5 Reading Assignment
+Learning Python
+Chapters 34 (The Context Management Protocol)
+
+Online
+
+https://docs.python.org/3/library/stdtypes.html?highlight=__enter__#context-manager-typesLinks to an external site.
+
+https://docs.python.org/3/library/concurrent.futures.htmlLinks to an external site.
+
+https://www.blog.pythonlibrary.org/2016/08/03/python-3-concurrency-the-concurrent-futures-module/
+
+week6 : Reading Assignment
+Online
+Reference (These are for getting to the low-level detail of the topics)
+
+ 
+
+Overall reference for concurrent execution/parallelism: 
+
+https://docs.python.org/3/library/concurrency.htmlLinks to an external site.
+
+Specific Documentation:
+
+https://docs.python.org/3/library/threading.html#module-threadingLinks to an external site.
+
+https://docs.python.org/3/library/multiprocessing.htmlLinks to an external site.
+
+https://docs.python.org/3/library/multiprocessing.html#pipes-and-queuesLinks to an external site.
+
+https://docs.python.org/3/library/multiprocessing.html#managersLinks to an external site.
+
+https://docs.python.org/3/library/threading.html#event-objectsLinks to an external site.
+
+https://docs.python.org/3/library/threading.html#timer-objectsLinks to an external site.
+
+https://docs.python.org/3/library/threading.html#lock-objectsLinks to an external site.
+
+https://docs.python.org/3/library/threading.html#condition-objectsLinks to an external site.
+
+https://docs.python.org/3/library/threading.html#semaphore-objectsLinks to an external site.
+
+ 
+
+Overall reference to asyncio:
+
+https://docs.python.org/3/library/asyncio.html?highlight=asyncioLinks to an external site.
+
+Specific Documentation:
+
+https://docs.python.org/3/library/asyncio-task.html#coroutineLinks to an external site.
+
+https://docs.python.org/3/library/asyncio-task.html#awaitablesLinks to an external site.
+
+ 
+
+Reading and Other Videos (For a general understanding)
+
+https://www.blog.pythonlibrary.org/2016/08/02/python-201-a-multiprocessing-tutorial/Links to an external site.
+
+https://www.geeksforgeeks.org/coroutine-in-python/Links to an external site.
+
+https://effectivepython.com/2015/03/10/consider-coroutines-to-run-many-functions-concurrently/Links to an external site.
+
+Keynote David Beazley - Topics of Interest (Python Asyncio
+Week 7:
+This lesson focuses on Design Patterns.  Please read the first page of the following article before watching the video lessons.
+
+https://sourcemaking.com/design_patternsLinks to an external site.
+
+In a nutshell, a design pattern is NOT code that performs some action to arrive at a solution.  It is a conceptual idea that you apply to a known problem.  This can/will lead to code, but most design patterns are not language-specific.
+
+Some patterns you are likely already familiar with:
+
+Producer/consumer
+Context manager (scoped object lifetime)
+Sentinel object
+Private class data
+Object inheritance
+In the videos you will see me apply these patterns to Python-specific solutions.  These are most definitely not the only way to implement the given patterns - they are MY interpretation of the patterns.  As you work through these solutions you may find a different approach that works better for your purposes.  That is not only OK, it is expected.  That is why many of these patterns do not have concrete code examples already built into the language.  The reason is that a given implementation way work for a specific set of circumstances but not others.
+
+Also, I do not cover every possible design pattern - that would be impossible.  Rather, I chose several form each basic category and tried to put them into simple terms so you can see how to apply them to your projects.
+
+Reading Assignment
+Online
+https://sourcemaking.com/design_patternsLinks to an external site.
+
+https://python-patterns.guide/Links to an external site.
+
+week 8: Reading Assignment
+Online
+https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#minLinks to an external site.   
+
+https://pandas.pydata.org/pandas-docs/stable/getting_started/index.htmlLinks to an external site.
+
+https://matplotlib.org/users/intro.html
+
+week 9 : Online Resources
+Tools:
+Flask - https://palletsprojects.com/p/flask/Links to an external site.
+
+Postman - www.getpostman.com/Links to an external site.
+
+Django - https://www.djangoproject.com/Links to an external site.
+
+Additional Reading:
+https://wsgi.readthedocs.io/en/latest/Links to an external site.
+
+https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flaskLinks to an external site.
+
+https://palletsprojects.com/p/jinja/Links to an external site.
+
+https://www.fullstackpython.com/jinja2.htmlLinks to an external site.
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/OverviewLinks to an external site.
+
+Advanced Web Programming (This is a LONG tutorial):
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-oneLinks to an external site.
+
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-twoLinks to an external site.
+
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-three
