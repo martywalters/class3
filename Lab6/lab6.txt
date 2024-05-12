@@ -1,0 +1,193 @@
+Python 3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+================ RESTART: C:\Users\marty\src\class3\Lab6\lab6.py ===============
+<G> Security guard starting their shift
+*B* Bank open
+(C) Customer_1 waiting outside bank
+(C) Customer_2 waiting outside bank
+<G> Security guard letting Customer_2 into the bank
+(C) Customer_2 getting into line
+(C) Customer_5 waiting outside bank
+<G> Security guard letting Customer_5 into the bank
+(C) Customer_5 getting into line
+(C) Customer_8 waiting outside bank
+<G> Security guard letting Customer_8 into the bank
+(C) Customer_8 getting into line
+(C) Customer_11 waiting outside bank
+<G> Security guard letting Customer_11 into the bank
+(C) Customer_11 getting into line
+(C) Customer_14 waiting outside bank
+<G> Security guard letting Customer_14 into the bank
+(C) Customer_14 getting into line
+(C) Customer_17 waiting outside bank
+<G> Security guard letting Customer_17 into the bank
+(C) Customer_17 getting into line
+(C) Customer_20 waiting outside bank
+<G> Security guard letting Customer_20 into the bank
+(C) Customer_20 getting into line
+(C) Customer_23 waiting outside bank
+<G> Security guard letting Customer_23 into the bank
+(C) Customer_23 getting into line
+(C) Customer_26 waiting outside bank
+<G> Security guard letting Customer_1 into the bank
+(C) Customer_1 getting into line
+(C) Customer_28 waiting outside bank
+(C) Customer_29 waiting outside bank
+(C) Customer_30 waiting outside bank
+(C) Customer_3 waiting outside bank
+(C) Customer_4 waiting outside bank
+(C) Customer_6 waiting outside bank
+(C) Customer_7 waiting outside bank
+(C) Customer_9 waiting outside bank
+(C) Customer_10 waiting outside bank
+(C) Customer_12 waiting outside bank
+(C) Customer_13 waiting outside bank
+(C) Customer_15 waiting outside bank
+(C) Customer_16 waiting outside bank
+(C) Customer_18 waiting outside bank
+(C) Customer_19 waiting outside bank
+(C) Customer_21 waiting outside bank
+(C) Customer_22 waiting outside bank
+(C) Customer_24 waiting outside bank
+(C) Customer_25 waiting outside bank
+<G> Security guard letting Customer_26 into the bank
+(C) Customer_26 getting into line
+(C) Customer_27 waiting outside bank
+[T] Teller_1 starting work
+[T] Teller_1  is now helping Customer_2
+[T] Teller_3 starting work
+[T] Teller_3  is now helping Customer_5
+[T] Teller_2 starting work
+[T] Teller_2  is now helping Customer_8
+[T] Teller_2 is done helping Customer_8
+<G> Security guard is letting Customer_8 out of the bank
+[T] Teller_2  is now helping Customer_11
+<G> Security guard letting Customer_28 into the bank
+(C) Customer_28 getting into line
+[T] Teller_1 is done helping Customer_2
+<G> Security guard is letting Customer_2 out of the bank
+[T] Teller_3 is done helping Customer_5
+<G> Security guard is letting Customer_5 out of the bank
+<G> Security guard letting Customer_29 into the bank
+(C) Customer_29 getting into line
+[T] Teller_3  is now helping Customer_17
+<G> Security guard letting Customer_30 into the bank
+(C) Customer_30 getting into line
+[T] Teller_1  is now helping Customer_14
+[T] Teller_2 is done helping Customer_11
+<G> Security guard is letting Customer_11 out of the bank
+[T] Teller_2  is now helping Customer_20
+<G> Security guard letting Customer_3 into the bank
+(C) Customer_3 getting into line
+[T] Teller_1 is done helping Customer_14
+<G> Security guard is letting Customer_14 out of the bank
+[T] Teller_1  is now helping Customer_23
+<G> Security guard letting Customer_4 into the bank
+(C) Customer_4 getting into line
+[T] Teller_3 is done helping Customer_17
+<G> Security guard is letting Customer_17 out of the bank
+[T] Teller_3  is now helping Customer_1
+<G> Security guard letting Customer_6 into the bank
+(C) Customer_6 getting into line
+[T] Teller_2 is done helping Customer_20
+<G> Security guard is letting Customer_20 out of the bank
+[T] Teller_2  is now helping Customer_26
+<G> Security guard letting Customer_7 into the bank
+(C) Customer_7 getting into line
+[T] Teller_1 is done helping Customer_23
+<G> Security guard is letting Customer_23 out of the bank
+[T] Teller_1  is now helping Customer_28
+<G> Security guard letting Customer_9 into the bank
+(C) Customer_9 getting into line
+[T] Teller_3 is done helping Customer_1
+<G> Security guard is letting Customer_1 out of the bank
+[T] Teller_3  is now helping Customer_29
+<G> Security guard letting Customer_10 into the bank
+(C) Customer_10 getting into line
+[T] Teller_3 is done helping Customer_29
+<G> Security guard is letting Customer_29 out of the bank
+[T] Teller_3  is now helping Customer_30
+<G> Security guard letting Customer_12 into the bank
+(C) Customer_12 getting into line
+[T] Teller_2 is done helping Customer_26
+<G> Security guard is letting Customer_26 out of the bank
+[T] Teller_2  is now helping Customer_3
+<G> Security guard letting Customer_13 into the bank
+(C) Customer_13 getting into line
+[T] Teller_3 is done helping Customer_30
+<G> Security guard is letting Customer_30 out of the bank
+[T] Teller_3  is now helping Customer_4
+<G> Security guard letting Customer_15 into the bank
+(C) Customer_15 getting into line
+[T] Teller_1 is done helping Customer_28
+<G> Security guard is letting Customer_28 out of the bank
+[T] Teller_2 is done helping Customer_3
+<G> Security guard is letting Customer_3 out of the bank
+[T] Teller_2  is now helping Customer_7
+[T] Teller_1  is now helping Customer_6
+<G> Security guard letting Customer_16 into the bank
+(C) Customer_16 getting into line
+<G> Security guard letting Customer_18 into the bank
+(C) Customer_18 getting into line
+[T] Teller_1 is done helping Customer_6
+<G> Security guard is letting Customer_6 out of the bank
+[T] Teller_1  is now helping Customer_9
+<G> Security guard letting Customer_19 into the bank
+(C) Customer_19 getting into line
+[T] Teller_2 is done helping Customer_7
+<G> Security guard is letting Customer_7 out of the bank
+[T] Teller_2  is now helping Customer_10
+<G> Security guard letting Customer_21 into the bank
+(C) Customer_21 getting into line
+[T] Teller_3 is done helping Customer_4
+<G> Security guard is letting Customer_4 out of the bank
+[T] Teller_3  is now helping Customer_12
+<G> Security guard letting Customer_22 into the bank
+(C) Customer_22 getting into line
+[T] Teller_3 is done helping Customer_12
+<G> Security guard is letting Customer_12 out of the bank
+[T] Teller_3  is now helping Customer_13
+<G> Security guard letting Customer_24 into the bank
+(C) Customer_24 getting into line
+[T] Teller_1 is done helping Customer_9
+<G> Security guard is letting Customer_9 out of the bank
+[T] Teller_1  is now helping Customer_15
+<G> Security guard letting Customer_25 into the bank
+(C) Customer_25 getting into line
+[T] Teller_2 is done helping Customer_10
+<G> Security guard is letting Customer_10 out of the bank
+[T] Teller_2  is now helping Customer_16
+[T] Teller_1 is done helping Customer_15
+<G> Security guard is letting Customer_15 out of the bank
+[T] Teller_1  is now helping Customer_18
+<G> Security guard letting Customer_27 into the bank
+(C) Customer_27 getting into line
+[T] Teller_3 is done helping Customer_13
+<G> Security guard is letting Customer_13 out of the bank
+[T] Teller_3  is now helping Customer_19
+[T] Teller_1 is done helping Customer_18
+<G> Security guard is letting Customer_18 out of the bank
+[T] Teller_1  is now helping Customer_21
+[T] Teller_2 is done helping Customer_16
+<G> Security guard is letting Customer_16 out of the bank
+[T] Teller_2  is now helping Customer_22
+[T] Teller_1 is done helping Customer_21
+<G> Security guard is letting Customer_21 out of the bank
+[T] Teller_1  is now helping Customer_24
+[T] Teller_2 is done helping Customer_22
+<G> Security guard is letting Customer_22 out of the bank
+[T] Teller_2  is now helping Customer_25
+[T] Teller_3 is done helping Customer_19
+<G> Security guard is letting Customer_19 out of the bank
+[T] Teller_3  is now helping Customer_27
+[T] Teller_1 is done helping Customer_24
+<G> Security guard is letting Customer_24 out of the bank
+[T] Teller_2 is done helping Customer_25
+<G> Security guard is letting Customer_25 out of the bank
+[T] Teller_3 is done helping Customer_27
+<G> Security guard is letting Customer_27 out of the bank
+[T] Teller_1 is going on break
+[T] Teller_2 is going on break
+[T] Teller_3 is going on break
+*B* Bank closed
