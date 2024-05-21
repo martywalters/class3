@@ -1,0 +1,26 @@
+Python 3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+================ RESTART: C:\Users\marty\src\class3\Lab7\lab7.py ===============
+Cheeseburger: grill all-beef patty
+Cheeseburger: flip patty
+Cheeseburger: put cheese on patty
+Cheeseburger: put patty on bun and add toppings
+Cheeseburger: All done!
+Cheeseburger: 5.99
+Pasta: boil water for noodles
+Pasta: saute onions, garlic and tomatoes for sauce
+Pasta: put noodles in water
+Pasta: season the sauce
+Pasta: plate noodles and add sauce on top
+Pasta: All done!
+Pasta: 8.99
+HotDog: boil water for dog
+HotDog: put dog in boiling water
+HotDog: plate an open bun
+HotDog: put dog in bun
+HotDog: put ketchup and mustard on dog in bun
+HotDog: 3.99
+Sorry, the restaurant does not make 'mac and cheese'
+This restaurant had 4 orders today for a total of $18.97 in sales.
+This restaurant had 4 orders today for a total of $18.97 in sales.
