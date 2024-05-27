@@ -3,8 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 #%matplotlib inline # For Jupyter Notebook only
 
-#df = pd.read_csv('car_data.csv', header='infer', index_col=0)
-df = pd.read_csv('car_data.csv', header='infer')
+df = pd.read_csv('car_data.csv', header='infer', index_col=0)
 print(df.head())
 
 df.plot(kind='scatter', x='Displ', y='City MPG', color='r')
@@ -24,21 +23,16 @@ plt.xlabel('Engine Displacement (L)')
 plt.ylabel('City MPG')
 plt.title('City MPG vs. Engine Displacement')
 
-
-
 plt.show()
+plt.close()
+df.plot(kind='line', x='Displ', y='Cmb MPG', figsize=(12, 6))
 
-df.plot(kind='line', x='Model', y='Cmb MPG', figsize=(12, 6))
-
-# Add labels and title
-plt.xlabel('Car Model')
+plt.xlabel('Engine Displacement (L)')
 plt.ylabel('Cmp MPG')
-plt.title('MPG Comparison Across Models')
+plt.title('MPG Comparison Across Engine Displacement')
 
-# Rotate x-axis labels for better readability
 plt.xticks(rotation=90)
 
-# Show the plot
 plt.show()
 
 
